@@ -1,0 +1,116 @@
+
+body
+{
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #000000;
+}
+
+div
+{
+  -webkit-transition: all 0.5s ease-in-out;
+   -moz-transition: all 0.5s ease-in-out;
+   -o-transition: all 0.5s ease-in-out;
+   transition: all 0.5s ease-in-out;
+}
+
+#hamSplash
+{
+  opacity: 1;
+  background-color: #ffffff;
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 0;
+  left:0;
+  top:0;
+}
+
+#fullWrap
+{
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+#hamNav
+{
+  width: 100%;
+  height: 40px;
+  background-color: #fffff3;
+}
+
+#hamNav ul
+{
+  display: none;
+}
+
+#hamWrap
+{
+  height: 30px;
+  width: 35px;
+  padding: 3px;
+  right:30px;
+  z-index: 2;
+  position: absolute;
+}
+
+#hamWrap div
+{
+    background-color: #000000;
+    height: 5px;
+    width: 35px;
+    margin-top: 5px;
+}
+
+#contentSec
+{
+  width: 100%;
+  justify-content: center;
+}
+
+#redImage
+{
+  height: 400px;
+  width: 100%;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+#redText
+{
+  height: 100px;
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+#blockWrap
+{
+  width: 800px;
+  margin: 0 auto;
+  height: 350px;
+}
+
+.redBlocks
+{
+  width: 350px;
+  height: 350px;
+  background-color: grey;
+}
+
+#firstBlock
+{
+  float: left;
+  margin-right: 50px;
+}
+
+#secondBlock
+{
+  float: right;
+  margin-left: 50px;
+}
