@@ -10,10 +10,10 @@ body
 
 div
 {
-  -webkit-transition: all 0.5s ease-in-out;
-   -moz-transition: all 0.5s ease-in-out;
-   -o-transition: all 0.5s ease-in-out;
-   transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
 }
 
 #hamSplash
@@ -67,50 +67,34 @@ div
 
 #contentSec
 {
-  width: 100%;
   justify-content: center;
 }
 
-#redImage
+#redImage img
 {
   height: 400px;
-  width: 100%;
   background-color: lightgrey;
-  text-align: center;
 }
 
 #redText
 {
-  height: 100px;
-  width: 800px;
   text-align: center;
-  margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 150px;
 }
 
-#blockWrap
-{
-  width: 800px;
-  margin: 0 auto;
-  height: 350px;
-}
-
 .redBlocks
 {
-  width: 350px;
   height: 350px;
   background-color: grey;
 }
 
 #firstBlock
 {
-  float: left;
-  margin-right: 50px;
+  margin-right: 5px;
 }
 
 #secondBlock
 {
-  float: right;
-  margin-left: 50px;
+  margin-left: 5px;
 }
