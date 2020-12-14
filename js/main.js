@@ -11,7 +11,7 @@ var exitSet = 0;
 function  triggerHamburger()
 {
   if (exitSet == 0){
-    navPage.style.width = 100+"vw";
+    navPage.style.width = 100+"%";
     barTwo.style.transform = "translateY("+20+"px)";
     barOne.style.transform = "rotate("+45+"deg) translate("+7+"px,"+7+"px)";
     barThree.style.transform = "rotate(-"+45+"deg) translate("+7+"px,-"+7+"px)";
