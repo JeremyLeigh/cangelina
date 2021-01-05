@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hamburger Script</title>
@@ -9,57 +9,117 @@
 <script src="js/main.js" async defer></script>
 </head>
 <body>
-  <div id="fullWrap">
-  <div id="navCont" class="container-fluid">
-  <nav id="hamNav" class="row">
-    <div class="col-sm">
+    <div id="topBar"><div id="redBar" class="row"><p class="col-md-6 offset-lg-1 offset-xxl-2 offset-md-0 offset-1 col-10">Located in London ON | Questions? Call Us: (519) 204-8189 </p></div></div>
+  <div id="navCont" class="container-xl">
+  <nav id="hamNav" class="row justify-content-center gx-0">
+    <div class="col-xl col-lg-5 col">
     </div>
+
     <div id="splashWidth">
       <div id="hamSplash">
       <ul id="mobileNav">
         <li><a href="index.html">Home</a></li>
-          <hr>
         <li><a href="store.html">Store</a></li>
-          <hr>
         <li><a href="about.html">About</a></li>
-          <hr>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
     </div>
-    <ul id="deskNav" class="col-5 float-right">
+    <div id="fog"></div>
+    <ul id="deskNav" class="col-5">
       <li><a href="index.html">Home</a></li>
       <li><a href="store.html">Store</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
+    <div id="cartPrev" class="col-2 col-sm-1">
+      <img src="icons/cart.svg" alt="Cart Preview" width="25">
+      <p>0</p>
+    </div>
+    <div id="hamCont" class="col-2 col-sm-1">
     <div id="hamWrap">
       <div id="hamOne"></div>
       <div id="hamTwo"></div>
       <div id="hamThree"></div>
     </div>
-    <div id="cartPrev" class="col-md-1 col-2">
-      <img src="icons/cart.svg" placeholder="Cart Preview" width="25">
-      <p>0</p>
-    </div>
-    <div class="col-1">
-    </div>
+  </div>
   </nav>
 </div>
-  <section id="contentSec" class="container-md">
-    <div id="redImage" class="row justify-content-center"><img class="col-lg-11" src="images/mainImage.jpg" placeholder="//Picture//"></div>
-      <hr>
+  <section id="imageSec">
+    <h2 class="hidden">Title</h2>
+    <div id="redImage" class="row g-0 justify-content-center"><div class="col-xxl-8 col-lg-10 col-12"><img src="images/phHome.png" alt="C'Angelina Home"></div></div>
+  </section>
+  <section id="introSec" class="container">
+    <h2 class="hidden">Introduction</h2>
     <div id="redText" class="row justify-content-center">
+      <h2>Serving London Communities</h2>
       <p class="col-lg-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Scelerisque felis imperdiet proin fermentum leo vel orci.</p>
     </div>
-      <hr>
-    <div id="blockWrap" class="row justify-content-center">
-      <div id="firstBlock" class="redBlocks col-lg-3 col-5"></div>
-      <div id="secondBlock" class="redBlocks col-lg-5 col-6"></div>
+    </section>
+    <section id="favSection" class="container">
+      <h2 class="hidden">Costumer Favourites</h2>
+    <div class="row gx-0 justify-content-center">
+      <div class="col-xl-8 col-lg-10 col-sm-12 col-11">
+        <h3 class="secHead">CUSTOMER FAVOURITES</h3>
+        <a class="viewBtn" href="store.html">View All</a>
+      </div>
+    </div>
+    <div class="blockWrap row justify-content-center">
+      <div class="redBlocks col-xl-4 col-lg-5 col-sm-6 col-11"><div></div></div>
+      <div class="redBlocks col-xl-4 col-lg-5 col-sm-6 col-11"><div></div></div>
+    </div>
+    <div class="blockWrap row justify-content-center">
+      <div class="redBlocks col-xl-5 col-lg-6 col-sm-7 col-11"><div></div></div>
+      <div class="redBlocks col-xl-3 col-lg-4 col-sm-5 col-11"><div></div></div>
+    </div>
+    <div id="extraBlocks" class="blockWrap row justify-content-center">
+      <div class="redBlocks col-xl-4 col-lg-5 col-sm-6 col-11"><div></div></div>
+      <div class="redBlocks col-xl-4 col-lg-5 col-sm-6 col-11"><div></div></div>
     </div>
   </section>
-</div>
+  <section id="caroSection">
+    <h2 class="hidden">Our Brand Slideshow</h2>
+    <div id="caroWrap" class="row gx-0">
+      <div id="carousel" class="col-12"></div>
+    </div>
+  </section>
+  <section id="socSection" class="container">
+    <h2 class="hidden">Social Journal</h2>
+    <div class="row justify-content-center">
+      <div class="col-xl-8 col-lg-10 col-sm-12 col-11">
+        <h3 class="secHead">SOCIAL JOURNAL</h3>
+        <a class="viewBtn" href="facebook.com">View All</a>
+      </div>
+    </div>
+    <div id="socialWrap" class="row justify-content-center">
+      <ul class="gx-0 col-xl-8 col-lg-10 col-12">
+        <li class="col-md-4 col-sm-6 col-12"><div></div></li>
+        <li class="col-md-4 col-sm-6 col-12"><div></div></li>
+        <li class="col-md-4 col-sm-6 col-12"><div></div></li>
+      </ul>
+    </div>
+  </section>
+  <section id="locSection" class="container">
+    <h2 class="hidden">Our Location</h2>
+    <div class="row"></div>
+  </section>
+  <footer id="bigFooter" class="container-fluid">
+    <h2 class="hidden">Footer</h2>
+    <div id="topFooter" class="row justify-content-center">
+      <div class="col-md-5 col-10"><img alt="BackToTop" src="icons/backToTop.svg"><p>Back to Top</p></div>
+    </div>
+    <div id="footerLinks" class="row no-gutters justify-content-center">
+      <div class="linkBlock col-sm-3 col-5"></div>
+      <div class="col-1"><div class="vl"></div></div>
+      <div class="linkBlock col-sm-4 col-11"></div>
+      <div class="col-1"><div class="vl"></div></div>
+      <div class="linkBlock col-sm-3 col-5"></div>
+    </div>
+    <div id="finalFooter" class="row justify-content-center">
+      <div class="col-md-10 col-11"></div>
+  </div>
+  </footer>
 </body>
 </html>

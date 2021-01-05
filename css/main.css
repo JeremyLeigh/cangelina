@@ -3,18 +3,58 @@ body
 {
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #000000;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #FFFFFF;
+    border-left: 8px solid #000;
+    border-right: 8px solid #000;
 }
 
-div
+nav, a, p, h1, h2, h3, section, img, hr, ul
 {
-  -webkit-transition: all 0.3s ease-in-out;
-   -moz-transition: all 0.3s ease-in-out;
-   -o-transition: all 0.3s ease-in-out;
-   transition: all 0.3s ease-in-out;
+  -webkit-animation: ease-out 0.6s slideInFromBottom;
+   -moz-animation: ease-out 0.6s slideInFromBottom;
+   -o-animation: ease-out 0.6s slideInFromBottom;
+   animation: ease-out 0.6s slideInFromBottom;
 }
+
+#hamWrap
+{
+  -webkit-animation: ease-out 0.6s slideInFromRight;
+   -moz-animation: ease-out 0.6s slideInFromRight;
+   -o-animation: ease-out 0.6s slideInFromRight;
+   animation: ease-out 0.6s slideInFromRight;
+}
+
+div, h1, h2, p, hr, img, nav, ul, section
+{
+   -webkit-transition: all ease-out 0.3s;
+   -moz-transition: all ease-out 0.3s;
+   -o-transition: all ease-out 0.3s;
+   transition: all ease-out 0.3s;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 
 a
 {
@@ -24,12 +64,17 @@ a
 
 a:hover
 {
-    color:red;
+    color: #d21404;
 }
 
 a:visited
 {
-  color: black;
+  color: inherit;
+}
+
+hr
+{
+  border-top: thin solid #333;
 }
 
 ul li
@@ -37,26 +82,47 @@ ul li
     list-style-type: none;
 }
 
+.hidden
+{
+  display: none;
+}
+
+#fog
+{
+  left:0;
+  top:0;
+  position:fixed;
+  z-index: 1;
+  height: 100vh;
+  width:0;
+  background-color: #ffffff;
+  opacity: 0.6;
+  padding: 0;
+}
+
 #splashWidth
 {
-  width:100vw;
+  left:0;
+  top:0;
+  width:100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   pointer-events: none;
+  z-index: 3;
 }
 
 #hamSplash
 {
   opacity: 1;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 3;
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 0;
   left:0;
   top:0;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
 }
 
 #mobileNav
@@ -68,6 +134,9 @@ ul li
 #mobileNav li
 {
   pointer-events: all;
+  border-bottom: thin solid lightgrey;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #fullWrap
@@ -77,18 +146,43 @@ ul li
   height: 100%;
 }
 
+#topBar
+{
+  height: 40px;
+}
+
+#redBar
+{
+  background-color: #d21404;
+  border-left: 8px solid #d21404;
+  border-right: 8px solid #d21404;
+  height: 40px;
+  position: absolute;
+  left:12px;
+  top:0;
+  width: 100%;
+}
+
+#redBar p
+{
+    color: #ffffff;
+    font-size: 0.8em;
+    text-align: center;
+}
 
 #hamNav
 {
   height: 40px;
-  background-color: #fffff3;
-  overflow: hidden;
+  background-color: #ffffff;
+  margin-top: 20px;
 }
 
 #deskNav
 {
   display: none;
   justify-content: flex-end;
+  padding-right: 10px;
+  overflow: hidden;
 }
 #deskNav li
 {
@@ -101,17 +195,17 @@ ul li
 #hamWrap
 {
   height: 30px;
-  width: 35px;
+  width: 40px;
   padding: 3px;
-  right:30px;
-  z-index: 2;
-  position: absolute;
+  z-index: 3;
+  position: relative;
+  bottom:10px;
 }
 
 #hamWrap div
 {
     background-color: #000000;
-    height: 5px;
+    height: 4px;
     width: 35px;
     margin-top: 5px;
 }
@@ -119,6 +213,10 @@ ul li
 #cartPrev
 {
   display: inline-flex;
+  padding-left: 10px;
+  margin-right: 20px;
+  position: relative;
+  bottom:10px;
 }
 
 #cartPrev p
@@ -132,39 +230,223 @@ margin-top: 10px;
   margin-bottom: 10px;
 }
 
+#redImage div
+{
+overflow: hidden;
+display: flex;
+justify-content: center;
+}
+
 #redImage img
 {
-  height: 400px;
-  background-color: lightgrey;
+  height: 100vh;
+  width: auto;
+}
+
+#imageSec
+{
+  padding-bottom: 15px;
+}
+
+#introSec
+{
+  padding-top: 125px;
+  padding-bottom: 125px;
+  border-top: thin solid lightgrey;
+  border-bottom: thin solid lightgrey;
 }
 
 #redText
 {
   text-align: center;
-  padding-top: 150px;
-  padding-bottom: 150px;
+}
+
+#redText h2
+{
+  margin-bottom: 30px;
+}
+
+#favSection
+{
+  margin-top: 80px;
+  padding-bottom:80px;
+  border-bottom: thin solid lightgrey;
+}
+
+.secHead
+{
+  margin-bottom: 15px;
+}
+
+.viewBtn
+{
+  float: right;
+  margin-bottom: 6px;
+  padding-bottom: 1px;
+}
+
+.viewBtn:hover
+{
+  border-bottom: 1px solid #d21404;
+  margin-bottom: 5px;
 }
 
 .redBlocks
 {
-  height: 350px;
+  height: 100px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.redBlocks div
+{
+  background-color: darkgrey;
+  width: 100%;
+  height: 100%;
+}
+
+#extraBlocks
+{
+  display: none;
+}
+
+#caroSection
+{
+  margin-top:80px;
+  padding-bottom: 80px;
+}
+
+#caroWrap
+{
+    height: 300px;
+    background-color: lightgrey;
+}
+
+#socSection
+{
+  padding-top:80px;
+  padding-bottom:80px;
+  border-top: thin solid lightgrey;
+  border-bottom: thin solid lightgrey;
+}
+
+#socialWrap ul li
+{
+  height: 250px;
+  display: inline-flex;
+  float: right;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+
+#socialWrap ul li div
+{
+    width: 100%;
+    height: 100%;
+    background-color: darkgrey;
+}
+
+#socialWrap ul li:last-child
+{
+  display: none;
+}
+
+#locSection
+{
+  margin-top: 60px;
+}
+
+#bigFooter
+{
+  background-color: darkgrey;
+}
+
+#topFooter
+{
+  padding-top: 20px;
+}
+
+#topFooter div
+{
+  text-align: center;
+}
+
+#topFooter div img
+{
+  width: 20px;
+}
+
+.linkBlock
+{
+  height: 220px;
+}
+
+.vl {
   background-color: grey;
+  width: 1px;
+  height: 200px;
+  margin: 0 auto;
 }
 
-#firstBlock
+#finalFooter
 {
-  margin-right: 5px;
+  height: 60px;
 }
 
-#secondBlock
-{
-  margin-left: 5px;
+/*Custom Query*/
+@media screen and (min-width: 465px) {
+  #redBar
+  {
+    height: 20px;
+  }
+  #topBar
+  {
+    height: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #socialWrap ul li:last-child
+  {
+    display: inline-flex;
+  }
+}
+
+/*Small Screen Query*/
+@media screen and (min-width: 576px) {
+  #extraBlocks
+  {
+    display: flex;
+  }
+  .redBlocks
+  {
+    height: 200px;
+  }
 }
 
 /*Medium Screen Query*/
 @media screen and (min-width: 720px) {
   #splashWidth {
     width: 60vw;
+  }
+  #fog
+  {
+    display: block;
+  }
+  #redImage div img
+  {
+    width: 100%;
+    height: auto;
+  }
+  #redImage div
+  {
+    height: 375px;
+    display: block;
+  }
+  #redBar p
+  {
+    text-align: left;
   }
 }
 
@@ -178,5 +460,9 @@ margin-top: 10px;
   #deskNav
   {
     display: flex;
+  }
+  #cartPrev
+  {
+    bottom:0px;
   }
 }
