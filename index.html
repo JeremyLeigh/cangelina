@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hamburger Script</title>
+<title>C'Angelina Catering</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="js/main.js" async defer></script>
 </head>
 <body>
-    <div id="topBar"><div id="redBar" class="row"><p class="col-md-6 offset-lg-1 offset-xxl-2 offset-md-0 offset-1 col-10">Located in London ON | Questions? Call Us: (519) 204-8189 </p></div></div>
+    <div id="topBar"><div id="redBar" class="row"><p class="col-md-6 offset-lg-1 offset-xxl-2 offset-md-0 offset-1 col-10">Located in London ON | Questions? Call Us: <span>(519) 204-8189</span></p></div></div>
   <div id="navCont" class="container-xl">
   <nav id="hamNav" class="row justify-content-center gx-0">
     <div class="col-xl col-lg-5 col">
@@ -18,19 +18,19 @@
     <div id="splashWidth">
       <div id="hamSplash">
       <ul id="mobileNav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="store.html">Store</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="store.html">STORE</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
       </ul>
     </div>
     </div>
     <div id="fog"></div>
     <ul id="deskNav" class="col-5">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="store.html">Store</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="store.html">STORE</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
     </ul>
     <div id="cartPrev" class="col-2 col-sm-1">
       <img src="icons/cart.svg" alt="Cart Preview" width="25">
@@ -94,7 +94,7 @@
       </div>
     </div>
     <div id="socialWrap" class="row justify-content-center">
-      <ul class="gx-0 col-xl-8 col-lg-10 col-12">
+      <ul class="gx-0 col-xl-8 col-lg-10 col-sm-12 col-11">
         <li class="col-md-4 col-sm-6 col-12"><div></div></li>
         <li class="col-md-4 col-sm-6 col-12"><div></div></li>
         <li class="col-md-4 col-sm-6 col-12"><div></div></li>
@@ -103,19 +103,51 @@
   </section>
   <section id="locSection" class="container">
     <h2 class="hidden">Our Location</h2>
-    <div class="row"></div>
+    <div class="row justify-content-center">
+      <div id="locBox" class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-11">
+        <ul>
+          <li><h3>LOCATION</h3></li>
+          <li><p>485-469 Third St, London ON, N5W 4W6</p></li>
+          <li><p>Phone (519) 204-8189</p></li>
+          <li><p>Email c-angelina@rogers.com</p></li>
+          <li><p>Tues-Fri 9am-6pm</p></li>
+          <li><p>Sat 9am-4pm</p></li>
+          <li><p>Sun-Mon Closed</p></li>
+          <li><div id="locDir" class="col-sm-6 col-11"><h4>Directions</h4></div></li>
+      </div>
+      <div id="locMap" class="gx-0 col-xl-4 col-lg-5 col-md-6 col-sm-12 col-11"><img src="images/phMap.png" alt="Our Location Map"></div>
+    </div>
   </section>
   <footer id="bigFooter" class="container-fluid">
     <h2 class="hidden">Footer</h2>
     <div id="topFooter" class="row justify-content-center">
-      <div class="col-md-5 col-10"><img alt="BackToTop" src="icons/backToTop.svg"><p>Back to Top</p></div>
+      <div class="col-md-5 col-10"><img alt="BackToTop" src="icons/backToTop.svg"><a href="#topBar">Back to Top</a></div>
     </div>
     <div id="footerLinks" class="row no-gutters justify-content-center">
-      <div class="linkBlock col-sm-3 col-5"></div>
-      <div class="col-1"><div class="vl"></div></div>
-      <div class="linkBlock col-sm-4 col-11"></div>
-      <div class="col-1"><div class="vl"></div></div>
-      <div class="linkBlock col-sm-3 col-5"></div>
+      <div class="linkBlock col-sm-3 col-5">
+        <ul>
+          <li><a href="about/home.html">ABOUT US</a></li>
+          <li><a href="about/custom.html">CUSTOM ORDERS</a></li>
+          <li><a href="about/faq.html">FAQ</a></li>
+          <li><a href="about/media.html">MEDIA INQUIRIES</a></li>
+        </ul>
+      </div>
+      <div class="gx-0 col-1"><div class="vl"></div></div>
+      <div id="middleLink" class="linkBlock col-sm-4 col-11">
+        <form>
+          <input id="homeEmail" type="email" placeholder="Email Address" name="emailA">
+          <input id="homeSubmit" type="submit" value="CONTACT US">
+        </form>
+      </div>
+      <div class="gx-0 col-1"><div class="vl"></div></div>
+      <div class="linkBlock col-sm-3 col-5">
+        <ul>
+          <li><h5>Business Hours</h5></li>
+          <li><p>Tues-Fri 9am-6pm</p></li>
+          <li><p>Sat 9am-4pm</p></li>
+          <li><p>Sun-Mon Closed</p></li>
+      </ul>
+    </div>
     </div>
     <div id="finalFooter" class="row justify-content-center">
       <div class="col-md-10 col-11"></div>

@@ -6,8 +6,13 @@ body
     padding-left: 0px;
     padding-right: 0px;
     background-color: #FFFFFF;
-    border-left: 8px solid #000;
-    border-right: 8px solid #000;
+    border-left: 8px solid #050505;
+    border-right: 8px solid #050505;
+}
+
+a, p, h1, h2, h3
+{
+  color: #050505
 }
 
 nav, a, p, h1, h2, h3, section, img, hr, ul
@@ -26,7 +31,7 @@ nav, a, p, h1, h2, h3, section, img, hr, ul
    animation: ease-out 0.6s slideInFromRight;
 }
 
-div, h1, h2, p, hr, img, nav, ul, section
+div:not(#locDir), h1, h2, p, hr, img, nav, ul, section
 {
    -webkit-transition: all ease-out 0.3s;
    -moz-transition: all ease-out 0.3s;
@@ -96,7 +101,7 @@ ul li
   height: 100vh;
   width:0;
   background-color: #ffffff;
-  opacity: 0.6;
+  opacity: 0.8;
   padding: 0;
 }
 
@@ -139,6 +144,11 @@ ul li
   padding-bottom: 20px;
 }
 
+#mobileNav li a
+{
+  font-size: 1.5rem;
+}
+
 #fullWrap
 {
   background-color: #ffffff;
@@ -170,6 +180,12 @@ ul li
     text-align: center;
 }
 
+#redBar span
+{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 #hamNav
 {
   height: 40px;
@@ -189,7 +205,12 @@ ul li
   display: inline-flex;
   margin-top: 10px;
   white-space: nowrap;
-  margin-left: 2em;s
+  margin-left: 2em;
+}
+
+#deskNav li a
+{
+  font-size: 0.9rem;
 }
 
 #hamWrap
@@ -200,11 +221,12 @@ ul li
   z-index: 3;
   position: relative;
   bottom:10px;
+  cursor: pointer;
 }
 
 #hamWrap div
 {
-    background-color: #000000;
+    background-color: #050505;
     height: 4px;
     width: 35px;
     margin-top: 5px;
@@ -228,6 +250,7 @@ margin-top: 10px;
 #cartPrev img
 {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 #redImage div
@@ -239,7 +262,7 @@ justify-content: center;
 
 #redImage img
 {
-  height: 100vh;
+  height: 90vh;
   width: auto;
 }
 
@@ -355,12 +378,72 @@ justify-content: center;
 
 #locSection
 {
-  margin-top: 60px;
+  margin-top: 80px;
+  margin-bottom:80px;
+}
+
+#locBox
+{
+  background-color: #050505;
+  height:420px;
+  padding-top:40px;
+}
+
+#locBox ul li h3
+{
+  color:#ffffff;
+}
+
+#locBox ul li p
+{
+  color:#ffffff;
+}
+
+#locBox h3
+{
+  margin-bottom:20px;
+}
+
+#locDir
+{
+  background-color: #d21404;
+  color:#ffffff;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 0px solid darkred;
+  border-left: 0px solid darkred;
+  border-right: 0px solid #d21404;
+  -webkit-transition: border ease-out 0.3s, transform ease-out 0.3s;
+  -moz-transition: border ease-out 0.3s, transform ease-out 0.3s;
+  -o-transition: border ease-out 0.3s, transform ease-out 0.3s;
+  transition: border ease-out 0.3s, transform ease-out 0.3s;
+}
+
+#locDir:hover
+{
+    border-bottom: 5px solid darkred;
+    border-left: 2px solid darkred;
+    border-right: 2px solid #d21404;
+    transform: translateY(-5px);
+    -webkit-transition: border-width ease-out 0.3s, transform ease-out 0.3s;
+    -moz-transition: border-width ease-out 0.3s, transform ease-out 0.3s;
+    -o-transition: border-width ease-out 0.3s, transform ease-out 0.3s;
+    transition: border-width ease-out 0.3s, transform ease-out 0.3s;
+}
+
+#locMap
+{
+  background-color: lightgrey;
+  height:420px;
+  overflow: hidden;
 }
 
 #bigFooter
 {
-  background-color: darkgrey;
+  background-color: #050505;
 }
 
 #topFooter
@@ -378,15 +461,67 @@ justify-content: center;
   width: 20px;
 }
 
+#topFooter div a
+{
+  color: #FFFFFF;
+  cursor:pointer;
+}
+
 .linkBlock
 {
   height: 220px;
+}
+
+.linkBlock ul li
+{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.linkBlock ul li a, .linkBlock ul li p, .linkBlock ul li h5
+{
+  color:#ffffff;
+}
+
+.linkBlock ul
+{
+  padding: 0;
+  margin: 0;
+}
+
+#middleLink
+{
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+#homeEmail
+{
+  height: 40px;
+  width: 65%;
+  padding: 10px;
+  margin: 0;
+}
+
+#homeSubmit
+{
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #d21404;
+  text-align: center;
+  border: none;
+  height: 40px;
+  width:35%;
+  display: flex;
+  float: right;
+  padding-left: 10px;
 }
 
 .vl {
   background-color: grey;
   width: 1px;
   height: 200px;
+  padding: 0;
   margin: 0 auto;
 }
 
