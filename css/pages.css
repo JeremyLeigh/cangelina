@@ -4,7 +4,23 @@
 #workNotice
 {
   background-color: #D67C1E;
+  max-height: 300px;
+  overflow-y: none;
+  -webkit-transition: height ease-out 0.3s;
+  -moz-transition: height ease-out 0.3s;
+  -o-transition: height ease-out 0.3s;
+  transition: max-height ease-out 0.3s;
 }
+
+#workNotice img
+{
+  width:15px;
+  height: auto;
+  float: right;
+  margin:8px;
+  cursor: pointer;
+}
+
 #workNotice p
 {
   color: #FFFFFF;
@@ -12,6 +28,7 @@
   width: 70%;
   margin: 0 auto;
   font-size: 0.8rem;
+  padding:5px;
 }
 #workNotice p span
 {
@@ -23,25 +40,59 @@
 
 #workHeader
 {
-  margin-bottom: 50px;
+  height: 400px;
+  width:100%;
+  position: relative;
+}
+
+#workHeader h2
+{
+  color:#222222;
+  text-align: center;
+  position: relative;
+  font-size: 16vw;
+  margin:0 auto;
+  line-height: 80px;
+  top:100px;
+}
+#workHeader h2::first-line
+{
+  font-size: 17vw;
+}
+
+#workHeader::before
+{
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/workshop.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/workshop.jpg', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/workshop.jpg', sizingMethod='scale')";
 }
 
 #workWrap
 {
-  margin-top:100px;
+  margin-top:180px;
 }
 
 
 .workImgWrap
 {
   display: inline-flex;
-  float:right;
+  align-self: flex-end;
 }
 
 .workTextWrap
 {
   display: inline-flex;
-  float:left;
+  align-self: flex-start;
   margin-bottom: 0;
   padding:15px;
   padding-top:0;
@@ -52,19 +103,33 @@
   height: auto;
 }
 
-.workImg
+.workTextWrap p
 {
-  width:100%;
-  height:300px;
-  overflow: hidden;
+  text-align: center;
+  font-weight: normal;
+}
+.workTextWrap:not(#firstText) p::first-line
+{
+  font-weight: bold;
 }
 
-.workImg img
+.workTextWrap div h4
 {
-  width: 150%;
-  min-height: 300px;
-  height: auto;
+    margin-bottom: 30px;
+    color: #496D61;
+    padding-right: 10px;
+    text-align: center;
 }
+
+#firstText h4
+{
+    color: #802420;
+}
+#lastText h4
+{
+    color: #D67C1E;
+}
+
 
 .fbWrap
 {
@@ -99,22 +164,16 @@
 .workInfo p
 {
   text-align: center;
+  font-weight: normal;
 }
-
-hr
-{
-  margin-left: 0;
-  margin-right: 0;
-}
-
 
 .newHR
 {
   margin:0 auto;
   width: 100px;
   height: 30px;
-  margin-top: 50px;
-  margin-bottom:50px;
+  margin-top: 100px;
+  margin-bottom:100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -152,11 +211,37 @@ hr
 }
 
 /*OUR STORY PAGE*/
+#aboutWrap
+{
+  padding-top:100px;
+  padding-bottom: 10px;
+}
+
+#aboutStartP img
+{
+  width: 100%;
+  height:auto;
+}
+
+#lookDown
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+#lookDown img
+{
+  width: 25px;
+  height: auto;
+}
+
+
 #aboutImg
 {
   position: relative;
-  min-height: 300px;
-  height: 300px;
+  height: 500px;
   width: 100%;
 }
 
@@ -165,6 +250,20 @@ hr
   color:#ffffff;
   text-align: center;
   position: relative;
+  font-size: 3rem;
+  margin:0 auto;
+  margin-top:190px;
+}
+
+#aboutImg p
+{
+  position: relative;
+  color:#ffffff;
+  margin:0 auto;
+  margin-top:10px;
+  text-align: center;
+  font-size:1rem;
+  font-weight: bold;
 }
 
 #aboutImg::before
@@ -175,11 +274,195 @@ hr
   left:0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/ourStory.jpg");
+  background: url("../images/ourStory.jpg") no-repeat center center fixed;
   filter: brightness(50%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ourStory.jpg', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ourStory.jpg', sizingMethod='scale')";
 }
 
 
+#aboutStartHeader h2
+{
+  font-weight: bold;
+  font-size: 10vw;
+  line-height: 2rem;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#aboutStartHeader h2::first-line
+{
+  line-height: 7rem;
+  font-size: 20vw;
+}
+
+#aboutStartHeader h2 span
+{
+font-family: 'Dancing Script', cursive;
+ font-size: 18vw;
+ line-height: 7rem;
+ display: block;
+ /* Fallback: Set a background color. */
+background-color: #222222;
+
+/* Create the gradient. */
+background-image: linear-gradient(45deg, #f3ec78, #af4261);
+
+/* Set the background size and repeat properties. */
+background-size: 200%;
+background-repeat: repeat;
+
+/* Use the text as a mask for the background. */
+/* This will show the gradient as a text color rather than element bg. */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-background-clip: text;
+-moz-text-fill-color: transparent;
+}
+
+#aboutStartP
+{
+  margin-bottom: 30px;
+  margin-top:60px;
+}
+
+.longhr
+{
+  margin-bottom: 20px;
+}
+
+.longContHr
+{
+  margin:0 auto;
+  overflow: hidden;
+  height: 30px;
+  padding:0;
+}
+
+.longContHr li
+{
+  display: inline-block;
+}
+
+.longContHr li div
+{
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin:9px;
+}
+
+#aboutTextWrap
+{
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+}
+
+#aboutTextWrap div:first-of-type
+{
+  margin-top:20px;
+}
+
+
+#aboutTextWrap div p
+{
+  padding-left:20px;
+  padding-right:20px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+#aboutTextWrap h2
+{
+  padding-left: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Our Story Ends */
+
+/* Fundraisers */
+#fundHeader
+{
+  margin: 0 auto;
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+
+#fundText
+{
+ margin: 0 auto;
+ margin-bottom: 50px;
+ font-weight: normal;
+}
+
+#fundText2
+{
+  margin: 0 auto;
+  margin-bottom: 160px;
+  font-weight: normal;
+}
+
+/*FAQ*/
+
+#faqList
+{
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.questions
+{
+
+}
+
+.answers p
+{
+  font-weight: normal;
+}
+.answers
+{
+  margin: 0 auto;
+}
+
+
+@media screen and (min-width: 560px) {
+  #aboutStartHeader h2
+  {
+    font-size: 4rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  #aboutStartHeader h2::first-line
+  {
+    line-height: 7rem;
+    font-size: 8rem;
+  }
+
+  #aboutStartHeader h2 span
+  {
+    font-size: 7rem;
+    line-height: 9rem;
+  }
+  #workHeader h2
+  {
+    font-size: 8rem;
+    line-height: 100px;
+    top:100px;
+  }
+  #workHeader h2::first-line
+  {
+    font-size: 6rem;
+  }
+}
 
 /*Medium Screen Query*/
 @media screen and (min-width: 767px) {
@@ -192,4 +475,71 @@ hr
   {
     height: 300px;
   }
+  .workTextWrap p
+  {
+    text-align: left;
+    padding-right: 40px;
+  }
+
+  .workTextWrap div h4
+  {
+      text-align: left;
+      padding-right: 10px;
+  }
+
 }
+
+@media screen and (min-width: 992px) {
+  #aboutStartHeader h2
+  {
+    line-height: 1.5rem;
+    text-align: left;
+  }
+}
+
+.workImg img {
+  border:solid 2px;
+  border-bottom-color:#ffe;
+  border-left-color:#eed;
+  border-right-color:#eed;
+  border-top-color:#ccb;
+  max-height:100%;
+  max-width:100%;
+}
+
+.frame {
+  background-color:#ddc;
+  border:solid 5vmin #fff;
+  border-bottom-color:#ECC77B;
+  border-left-color:#d6b269;
+  border-radius:2px;
+  border-right-color:#d6b269;
+  border-top-color:#c79f50;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  height:auto;
+  padding:2vmin;
+  position:relative;
+  text-align:center;
+}
+  .frame:before {
+    border-radius:2px;
+    bottom:-2vmin;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+    content:"";
+    left:-2vmin;
+    position:absolute;
+    right:-2vmin;
+    top:-2vmin;
+  }
+  .frame:after {
+    border-radius:2px;
+    bottom:-2.5vmin;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+    content:"";
+    left:-2.5vmin;
+    position:absolute;
+    right:-2.5vmin;
+    top:-2.5vmin;
+  }

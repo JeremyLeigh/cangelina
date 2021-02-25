@@ -3,15 +3,15 @@ echo '
 <footer id="bigFooter" class="container-fluid">
   <h2 class="hidden">Footer</h2>
   <div id="topFooter" class="row justify-content-center">
-    <div class="col-md-2 col-sm-3 col-6"><img alt="BackToTop" src="icons/backToTop.svg"><a href="#topBar">Back to Top</a></div>
+    <div id="toTop" class="col-md-2 col-sm-3 col-6"><img alt="BackToTop" src="icons/backToTop2.svg"><a  href="javascript:void(0)">Back to Top</a></div>
   </div>
   <div id="footerLinks" class="row no-gutters justify-content-center">
     <div class="offLink linkBlock col-sm-3 col-5">
       <ul>
-        <li><a href="about/home.html">ABOUT US</a></li>
-        <li><a href="about/custom.html">CUSTOM ORDERS</a></li>
-        <li><a href="about/faq.html">FAQ</a></li>
-        <li><a href="about/media.html">MEDIA INQUIRIES</a></li>
+        <li><a href="about.php">ABOUT US</a></li>
+        <li><a href="fundraiser.php">FUNDRAISERS</a></li>
+        <li><a href="catering.php">CATERING</a></li>
+        <li><a href="faq.php">FAQ</a></li>
       </ul>
     </div>
     <div id="firstVl" class="gx-0 col-1"><div class="vl"></div></div>
@@ -21,23 +21,24 @@ echo '
         <div id="homeSubmit"><input type="submit" value="CONTACT US"></div>
       </form>
       <div id="footCall" class="row justify-content-center gx-0">
-        <div class="col-8">
+        <div class="col-12">
           <div>
             <img src="icons/phone.svg" alt="Phone Icon">
-            <p>Call Us (519) 204-8189</p>
+            <p>Call Us &nbsp;<a id="callLink" href="tel:5192048189">(519) 204-8189</a></p>
           </div>
           </div>
       </div>
       <div id="footSoc" class="row justify-content-center gx-0">
         <div class="col-8">
           <div>
-            <a href="https://www.facebook.com/cangelinameatcatering/"><svg version="1.1" class="socIcons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <a href="https://www.facebook.com/cangelinameatcatering/" target="_blank" rel="noopener noreferrer"><svg version="1.1" class="socIcons" id="facebookSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 455.73 455.73" style="enable-background:new 0 0 455.73 455.73;" xml:space="preserve">
              <path fill="#ffffff" d="M0,0v455.73h242.704V279.691h-59.33v-71.864h59.33v-60.353c0-43.893,35.582-79.475,79.475-79.475h62.025v64.622h-44.382
               c-13.947,0-25.254,11.307-25.254,25.254v49.953h68.521l-9.47,71.864h-59.051V455.73H455.73V0H0z"/>
             </svg>
             </a>
-            <a href="instagram.com"><svg version="1.1" class="socIcons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <a href="https://www.instagram.com/angelinameatcatering/" target="_blank" rel="noopener noreferrer"><svg version="1.1" class="socIcons" id="instagramSVG"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 364 364" style="enable-background:new 0 0 364 364;" xml:space="preserve">
               <path fill="#ffffff" style="fill-rule:evenodd;clip-rule:evenodd;" d="M244.424,83.438H119.577c-19.925,0-36.139,16.213-36.139,36.139v124.846
                c0,19.929,16.214,36.143,36.139,36.143h124.847c19.928,0,36.142-16.214,36.142-36.143V119.577
@@ -50,6 +51,13 @@ echo '
               <path fill="#ffffff" style="fill-rule:evenodd;clip-rule:evenodd;" d="M0,0v364h364V0H0z M307.984,244.423c0,35.053-28.508,63.561-63.56,63.561
                H119.577c-35.049,0-63.561-28.508-63.561-63.561V119.577c0-35.049,28.512-63.561,63.561-63.561h124.847
                c35.052,0,63.56,28.512,63.56,63.561V244.423z"/>
+               <defs>
+              <linearGradient id="brand-gradient" gradientTransform="rotate(20)">
+                <stop offset="0%" stop-color="#F8ED34" />
+                <stop offset="50%" stop-color="#EA118D" />
+                <stop offset="100%" stop-color="#2E368F" />
+              </linearGradient>
+               </defs>
              </svg>
             </a>
           </div>
@@ -60,9 +68,8 @@ echo '
     <div class="offLink linkBlock col-sm-3 col-5">
       <ul>
         <li><h5>Business Hours</h5></li>
-        <li><p>Tues-Fri 9am-6pm</p></li>
-        <li><p>Sat 9am-4pm</p></li>
-        <li><p>Sun-Mon Closed</p></li>
+        <li><p>Mon-Sun - Variable Hours</p></li>
+        <li><p>Please Call or Email to Book an Appointment</p></li>
     </ul>
   </div>
   </div>
