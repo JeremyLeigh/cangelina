@@ -13,7 +13,7 @@ ECHO
   <div id="hamSplash">
   <ul id="mobileNav">
     <li class="search"><input type="search" placeholder="SEARCH \"><button><img src="icons/search.svg" alt="Search Button"></button></li>
-    <li class="mobileNavMain"><a href="index.php">HOME</a></li>
+    <li class="mobileNavMain"><a href="store.php">MENU</a></li>
     <li class="mobileNavMain"><a href="workshop.php">WORKSHOPS</a></li>
     <li id="navAbout" class="mobileNavMain"><a href="javascript:void(0)">ABOUT US</a><img src="icons/chevron.svg" alt="Chevron"></li>
     <li class="mobileNavMini aboutNavHidden"><a href="about.php">This Is Us</a></li>
@@ -26,7 +26,7 @@ ECHO
 </div>
 <div id="fog"></div>
 <ul id="deskNav" class="col-7">
-  <li class="deskHome"><div class="tab homeTab"></div><a class="deskLink" href="index.php">HOME</a><div></div></li>
+  <li class="deskHome"><div class="tab homeTab"></div><a class="deskLink" href="store.php">MENU</a><div></div></li>
   <li class="deskWork"><div class="tab workTab"></div><a class="deskLink" href="workshop.php">WORKSHOPS</a></li>
   <li class="dropdown deskAbout"><div class="tab aboutTab"></div>
     <a href="javascript:void(0)" class="dropbtn deskLink">ABOUT</a>

@@ -24,7 +24,7 @@
     <h2 class="hidden">Introduction</h2>
     <div id="redText" class="row justify-content-center">
       <h2>We're Not Your Average Butcher</h2>
-      <p class="col-lg-8 col-10">Here at C'Angelina's we do a lot more than cut. Our commercial kitchen lets us take on your order from start to finish. We're passionate about making your idea into something truly great.</p>
+      <p class="col-lg-8 col-10">Here at C'Angelina's we do a lot more than cuts. Our commercial kitchen lets us take on your order from start to finish. We're passionate about making your idea into something truly great.</p>
     </div>
     </section>
     <section id="favSection" class="container">
@@ -90,7 +90,7 @@
           <li><p><a href="mailto:c-angelina@rogers.com">Email c-angelina@rogers.com</a></p></li>
           <li><p>Mon-Sun - Variable Hours</p></li>
           <li><p>Please Book Appointments by Phone or Email.</p></li>
-          <li><a href="https://goo.gl/maps/Eqt3TDHwVZnBNER8A" target="_blank" rel="noopener noreferrer"><div id="locDir" class="col-sm-6 col-11"><h4>Directions</h4><h4>Directions</h4></div></a></li>
+          <li><a href="https://goo.gl/maps/Eqt3TDHwVZnBNER8A" target="_blank" rel="noopener noreferrer"><div id="locDir" class="col-sm-6 col-11"><h4>Directions</h4></div></a></li>
         </ul>
       </div>
       <div id="locMap" class="gx-0 col-lg-5 col-md-6 col-sm-12 col-11"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d364.72847563231284!2d-81.18556192690583!3d43.00296030000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eed81537fb57d%3A0x15b7b9d4e389d654!2sC&#39;Angelina%20Meat%20Catering!5e0!3m2!1sen!2sca!4v1613073934759!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>

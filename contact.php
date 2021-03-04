@@ -27,7 +27,11 @@
             </div>
             <div class="formGroup">
               <label for="email">Email</label>
-              <input type="text" name="mail" value="">
+              <input type="text" name="mail" value="<?php
+              if(isset($_POST['mail']))
+              {
+                echo $_POST['mail'];
+              }?>">
             </div>
             <div class="formGroup">
               <label for="subject">Subject</label>

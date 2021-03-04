@@ -38,14 +38,14 @@
 
 /*Covid Response Notice Ends*/
 
-#workHeader
+.workHeader
 {
   height: 400px;
   width:100%;
   position: relative;
 }
 
-#workHeader h2
+.workHeader h2
 {
   color:#222222;
   text-align: center;
@@ -55,12 +55,12 @@
   line-height: 80px;
   top:100px;
 }
-#workHeader h2::first-line
+.workHeader h2::first-line
 {
-  font-size: 17vw;
+  font-size: 16vw;
 }
 
-#workHeader::before
+.workshopImg::before
 {
   content: "";
   position: absolute;
@@ -213,7 +213,7 @@
 /*OUR STORY PAGE*/
 #aboutWrap
 {
-  padding-top:100px;
+  padding-top:50px;
   padding-bottom: 10px;
 }
 
@@ -228,7 +228,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  cursor: pointer;
 }
 
 #lookDown img
@@ -284,6 +286,12 @@
 -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ourStory.jpg', sizingMethod='scale')";
 }
 
+#aboutStartHeader
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #aboutStartHeader h2
 {
@@ -418,11 +426,10 @@ background-repeat: repeat;
     margin-bottom: 100px;
 }
 
-.questions
+.answers a
 {
-
+  font-weight: normal;
 }
-
 .answers p
 {
   font-weight: normal;
@@ -432,10 +439,6 @@ background-repeat: repeat;
   margin: 0 auto;
 }
 /*Contact*/
-.contactSection
-{
-
-}
 
 .contactWrap
 {
@@ -451,6 +454,12 @@ background-repeat: repeat;
   flex-direction: column;
   width: 100%;
   margin-bottom: 100px;
+}
+#fundHeader
+{
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 .formGroup
@@ -473,7 +482,7 @@ background-repeat: repeat;
 textarea
 {
   resize: vertical;
-  height: 300px;
+  height: 200px;
 }
 
 button[type="submit"]
@@ -484,7 +493,8 @@ button[type="submit"]
   outline: none;
   padding:15px;
   font-size: 20px;
-  color: #80241F;
+  background-color: #80241F;
+  color: #ffffff;
   text-align: center;
   cursor: pointer;
   margin-top: 10px;
@@ -498,10 +508,246 @@ button[type="submit"]
 
 button[type="submit"]:hover
 {
-  background-color: #80241F;
+  background-color: #5e1a25;
+}
+/* Custom Catering */
+.cateringImg h2
+{
   color: #ffffff;
+}
+
+
+#cateringIntro
+{
+margin: 0 auto;
+margin-top: 50px;
+font-weight: normal;
+margin-bottom: 100px;
+text-align: center;
+}
+
+.stepWrap
+{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.stepWrap img
+{
+  width: 60px;
+  height: auto;
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.stepThree img
+{
+  width: 50px;
+  margin-bottom: 50px;
+}
+
+.stepWrap p
+{
+  font-weight: normal;
+  text-align: left;
+}
+
+.stepWrap h4
+{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stepOne img
+{
+  margin-bottom: 40px;
+}
+
+.stepsWrapper
+{
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#cateringInfo
+{
+margin: 0 auto;
+margin-top: 100px;
+font-weight: normal;
+margin-bottom: 80px;
+text-align: center;
+}
+
+
+.cateringImg::before
+{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    background: url("../images/extra.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/extra.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/extra.jpg', sizingMethod='scale')";
+}
+
+/* Store */
+
+.popUpDetails
+{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  max-width: 1000px;
+  height: 90vh;
+  max-height: 700px;
 
 }
+.popUpDetails img
+{
+  width: 50%;
+  height: 100%;
+
+}
+
+.screenWipe
+{
+  background-color: rgba(128,128,128, 0.6);
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  z-index: 5;
+}
+
+.storeImg::before
+{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/herb2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/herb2.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/herb2.jpg', sizingMethod='scale')";
+}
+
+#catWrap ul
+{
+  display: flex;
+  margin-top: 30px;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+#catWrap ul li
+{
+  background-color: lightgrey;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin:5px;
+}
+
+#catWrap ul li p
+{
+  color: #ffffff;
+  padding: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#resultWrap
+{
+  margin-bottom: 100px;
+}
+
+#resultHeader
+{
+  color:grey;
+}
+
+.resultSlider
+{
+  overflow-x: scroll;
+}
+
+.resultSlider ul
+{
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.menuItem
+{
+  width: 200px;
+  height: 225px;
+  padding: none;
+  box-shadow: 0px 0px 15px grey;
+  margin: 15px;
+}
+
+.menuItem img
+{
+  width: 200px;
+  height: 150px;
+}
+
+.menuItem div h4
+{
+  text-align: center;
+  color: #222222;
+}
+
+.menuItem div
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75px;
+}
+
+.menuItem div a
+{
+  position: relative;
+  bottom:-8px;
+  z-index: 1;
+  cursor: pointer;
+  color: #80241F;
+  pointer-events: all;
+  font-weight: normal;
+}
+
+.menuItem div a:hover
+{
+  color:#5e1a25;
+}
+
+#favouritesWrap
+{
+  margin-bottom: 100px;
+}
+
+#favouritesHeader
+{
+  color:grey;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 560px) {
@@ -523,15 +769,27 @@ button[type="submit"]:hover
     font-size: 7rem;
     line-height: 9rem;
   }
-  #workHeader h2
+  .workHeader h2
   {
-    font-size: 8rem;
     line-height: 100px;
     top:100px;
   }
-  #workHeader h2::first-line
+  .workHeader h2::first-line
   {
     font-size: 6rem;
+  }
+  #catWrap ul
+  {
+
+  }
+
+  #catWrap ul li
+  {
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin:5px;
   }
 }
 
@@ -557,14 +815,25 @@ button[type="submit"]:hover
       text-align: left;
       padding-right: 10px;
   }
-
+  .workHeader h2
+  {
+    font-size: 8rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
   #aboutStartHeader h2
   {
     line-height: 1.5rem;
-    text-align: left;
+    text-align: center;
+  }
+  .stepsWrapper
+  {
+    flex-direction: row;
+  }
+  #catWrap ul
+  {
+    justify-content:flex-start;
   }
 }
 

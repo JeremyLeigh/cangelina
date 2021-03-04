@@ -12,7 +12,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="js/main.js" async defer></script>
 </head>
-<body>
+<body id="aboutPage">
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="BcPt7BLD"></script>
   <?php include "includes/nav.php"?>
     <section class="container-fluid">
@@ -20,8 +20,8 @@
       <div class="row justify-content-center">
         <div class="gx-0 col-xxl-8 col-lg-10 col-12">
           <div id="aboutWrap" class="gx-0 row justify-content-center">
-            <div id="aboutStartHeader" class="gx-0 col-xl-6 col-lg-7 col-10"><h2>This is<br><span>C'Angelina</span><br> Meat Catering</h2></div>
-            <div id="aboutStartP" class="gx-0 col-xl-6 col-lg-5 col-10"><img src="images/onion.webp" alt="Onion"></div>
+            <div id="aboutStartHeader" class="gx-0 col-xl-6 col-lg-6 col-10"><h2>This is<br><span>C'Angelina</span><br> Meat Catering</h2></div>
+            <div id="aboutStartP" class="gx-0 col-xl-6 col-lg-6 col-10"><img src="images/shoulder.jpg" alt="Meat Cut"></div>
             <div id="lookDown" class="col-12"><img src="icons/lookDown.svg" alt="Scroll Down"></div>
             <div class="longhr"><ul class="longContHr"><li><div class="hrOrange"></div></li><li><div class="hrGreen"></div></li><li><div class="hrRed"></div></li><li><div class="hrOrange"></div></li>
               <li><div class="hrGreen"></div></li><li><div class="hrRed"></div></li><li><div class="hrOrange"></div></li><li><div class="hrGreen"></div></li><li><div class="hrRed"></div></li>

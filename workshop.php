@@ -18,11 +18,11 @@
   <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="BcPt7BLD"></script>
   <?php include "includes/nav.php"?>
-  <div id="workHeader" class="col-2"><h2>Artisan<br>Workshops</h2></div>
+  <div class="col-2 workHeader workshopImg"><h2>Artisan<br>Workshops</h2></div>
     <section class="container">
       <h2 class="hidden">Workshops</h2>
       <div class="row justify-content-center">
-        <div class="col-xl-9 col-lg-11 col-11">
+        <div class="col-xl-8 col-lg-10 col-11">
           <div class="row justify-content-center">
             <div id="workNotice" class="col-lg-8 col-12"><img src="icons/cancel3.svg" alt="Dismiss"><p>**DUE TO COVID-19 RESTRICTIONS OUR ARTISAN WORKSHOPS HAVE BEEN TEMORARILY PUT ON HOLD. PLEASE CHECK BACK HERE AND ON OUR <span onclick="window.location='https://www.facebook.com/cangelinameatcatering/'">FACEBOOK</span> PAGE FOR UPDATES**</p></div>
           </div>

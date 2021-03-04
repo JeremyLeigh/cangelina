@@ -12,6 +12,10 @@ body
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+:root {
+  --vh: 1vh;
+}
+
 a, p, h1, h2, h3, h4, h5
 {
   color: #222222;
@@ -117,7 +121,7 @@ ul, li, ol
   top:0;
   position:fixed;
   z-index: 1;
-  height: 100vh;
+  height: 100%;
   width:0;
   background-color: #ffffff;
   opacity: 0.8;
@@ -129,7 +133,7 @@ ul, li, ol
   left:0;
   top:0;
   width:100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   pointer-events: none;
   z-index: 3;
@@ -197,8 +201,8 @@ ul, li, ol
   background-color: #ffffff;
   pointer-events: all;
   border-bottom: thin solid #e5e5e5;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   -webkit-transition: all ease-out 0.2s;
   -moz-transition: all ease-out 0.2s;
   -o-transition: all ease-out 0.2s;
@@ -323,12 +327,14 @@ padding-top: 5px;
     color: #ffffff;
     font-size: 0.8em;
     text-align: center;
+    font-weight: normal;
 }
 
 #redBar a
 {
   text-decoration: underline;
   color:#ffffff;
+  font-weight: normal;
 }
 
 #hamNav
@@ -502,6 +508,7 @@ padding-top: 5px;
 {
   position: relative;
   height: 90vh;
+  height: calc(var(--vh, 1vh) * 90);
   min-height: 500px;
   width: 100%;
 }
@@ -871,7 +878,7 @@ filter: brightness(50%);
 
 #locDir
 {
-  background-color: #D67C1E;
+  background-color: #80241F;
   color:#ffffff;
   text-align: center;
   padding-top: 10px;
@@ -879,48 +886,26 @@ filter: brightness(50%);
   cursor: pointer;
   position: relative;
   border-bottom: 0px solid #bd6d1a;
-  -webkit-transition: border ease-out 0.1s, transform ease-out 0.1s;
-  -moz-transition: border ease-out 0.1s, transform ease-out 0.1s;
-  -o-transition: border ease-out 0.1s, transform ease-out 0.1s;
-  transition: border ease-out 0.1s, transform ease-out 0.1s;
+  -webkit-transition: background-color ease-out 0.1s, transform ease-out 0.1s;
+  -moz-transition: background-color ease-out 0.1s, transform ease-out 0.1s;
+  -o-transition: background-color ease-out 0.1s, transform ease-out 0.1s;
+  transition: background-color ease-out 0.1s, transform ease-out 0.1s;
 }
 
 #locDir h4
 {
-  color:  #a6a098;
+  color:  #ffffff;
 }
 
-#locDir h4:first-of-type
-{
-  position: absolute;
-left: 0;
-right: 0;
-margin: auto;
-color: #ffffff;
-transform: translateY(0px);
--webkit-transition: transform ease-out 0.2s;
--moz-transition: transform ease-out 0.2s;
--o-transition: transform ease-out 0.2s;
-transition: transform ease-out 0.2s;
-}
 
 #locDir:hover
 {
-    border-bottom: 5px solid #a15d16;
-    transform: translateY(-5px);
-    -webkit-transition: border-width ease-out 0.2s, transform ease-out 0.2s;
-    -moz-transition: border-width ease-out 0.2s, transform ease-out 0.2s;
-    -o-transition: border-width ease-out 0.2s, transform ease-out 0.2s;
-    transition: border-width ease-out 0.2s, transform ease-out 0.2s;
-}
+  background-color: #5e1a25;
+  -webkit-transition: background-color ease-out 0.1s, transform ease-out 0.1s;
+  -moz-transition: background-color ease-out 0.1s, transform ease-out 0.1s;
+  -o-transition: background-color ease-out 0.1s, transform ease-out 0.1s;
+  transition: background-color ease-out 0.1s, transform ease-out 0.1s;
 
-#locDir:hover > h4:first-of-type
-{
-  transform: translateY(2px);
-  -webkit-transition: transform ease-out 0.2s;
-  -moz-transition: transform ease-out 0.2s;
-  -o-transition: transform ease-out 0.2s;
-  transition: transform ease-out 0.2s;
 }
 
 #locMap

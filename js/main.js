@@ -20,7 +20,13 @@ var covText = document.querySelector("#workNotice p");
 //Scroll to top
 var backToTopBtn = document.querySelector("#toTop");
 var page = document.body;
-console.log(backToTopBtn);
+//Scroll Down
+var scrolldownBtn = document.querySelector("#lookDown");
+var storyText = document.querySelector("#aboutTextWrap");
+//Mobile height
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh',`${vh}px`);
+
 
 //FUNCT
 //ham menu
@@ -104,6 +110,13 @@ function  triggerHamburger()
         document.documentElement.scrollTop = 0;
       }
 
+//Scroll to Our STORY
+
+
+      function scrollToStory()
+      {
+        storyText.scrollIntoView();
+      }
 
 
 //EV LIST
@@ -126,9 +139,13 @@ window.onload = function()
     if (document.body.id === "workshopPage") {
       //Covid Notice
       covNoticeX.addEventListener("click", noticeDismiss, false);
-
     }
+    else if(document.body.id === "aboutPage") {
+      //Scroll to STORY
+      scrolldownBtn.addEventListener("click", scrollToStory, false);
+    }
+
     else{
-      console.log("Workshop Functions Omitted");
+      console.log("Functions Omitted");
     }
   };

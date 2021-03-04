@@ -16,8 +16,8 @@ echo '
     </div>
     <div id="firstVl" class="gx-0 col-1"><div class="vl"></div></div>
     <div id="middleLink" class="linkBlock col-md-4 col-11">
-      <form>
-        <input id="homeEmail" type="email" placeholder="Email Address" name="emailA">
+      <form method="post" action="contact.php">
+        <input id="homeEmail" type="email" placeholder="Email Address" name="mail">
         <div id="homeSubmit"><input type="submit" value="CONTACT US"></div>
       </form>
       <div id="footCall" class="row justify-content-center gx-0">

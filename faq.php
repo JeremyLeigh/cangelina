@@ -31,6 +31,8 @@
             <li class="answers"><p>Pretty wild! We really try to let the customer be as involved in their order as they feel comfortable. We do however keep a minimum standard on all the food we send out.</p></li>
             <li class="questions"><p>How do I get access to the good meat cuts in the back?</p></li>
             <li class="answers"><p>You've already got it! At C'Angelina's what you see is what you get. We give you all of and exactly what you ask for. No sectets and always the best cuts.</p></li>
+            <li class="questions"><p>What is the best way to communicate?</p></li>
+            <li class="answers"><p>We're a little old school when it comes to chatting with our customers. We beleive a phone call is the best way to iron things out and make sure things are done right. You can reach us at <a href="tel:5192048189">(519) 204-8189</a>.</p></li>
           </ul>
         </div>
     </div>
