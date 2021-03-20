@@ -26,6 +26,11 @@ var storyText = document.querySelector("#aboutTextWrap");
 //Mobile height
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh',`${vh}px`);
+let vw = window.innerWidth * 0.01;
+document.documentElement.style.setProperty('--vw',`${vw}px`);
+//Customer fav
+var custFavs = document.querySelectorAll('.storeLink');
+var workLink = document.querySelector("#workLink");
 
 
 //FUNCT
@@ -133,6 +138,8 @@ aboutBtn.addEventListener("click", navDrop, false);
 backToTopBtn.addEventListener("click", scrollToTop, false);
 
 
+
+
 //page specific content
 window.onload = function()
 {
@@ -144,8 +151,18 @@ window.onload = function()
       //Scroll to STORY
       scrolldownBtn.addEventListener("click", scrollToStory, false);
     }
+    else if(document.body.id === "homePage") {
+      //Scroll to STORY
+      workLink.addEventListener("click", function() {
+        window.location.href = "workshop.php";
+      });
 
+      custFavs.forEach(item => {
+        item.addEventListener('click', loadStore, false);
+      });
+    }
     else{
       console.log("Functions Omitted");
     }
   };
+  window.onScrollEffect();

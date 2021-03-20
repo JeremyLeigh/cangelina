@@ -1,6 +1,6 @@
 <?php
 echo '
-<footer id="bigFooter" class="container-fluid">
+<footer data-scroll="mulder" id="bigFooter" class="container-fluid">
   <h2 class="hidden">Footer</h2>
   <div id="topFooter" class="row justify-content-center">
     <div id="toTop" class="col-md-2 col-sm-3 col-6"><img alt="BackToTop" src="icons/backToTop2.svg"><a  href="javascript:void(0)">Back to Top</a></div>

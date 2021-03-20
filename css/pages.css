@@ -291,28 +291,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 #aboutStartHeader h2
 {
   font-weight: bold;
-  font-size: 10vw;
-  line-height: 2rem;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
-#aboutStartHeader h2::first-line
+#aboutStartHeader h2:first-of-type
 {
-  line-height: 7rem;
   font-size: 20vw;
 }
 
-#aboutStartHeader h2 span
+#aboutStartHeader h2:last-of-type
+{
+  font-size: 18vw;
+}
+
+#specialH2
 {
 font-family: 'Dancing Script', cursive;
- font-size: 18vw;
- line-height: 7rem;
+ font-size: 20vw;
  display: block;
  /* Fallback: Set a background color. */
 background-color: #222222;
@@ -334,7 +336,7 @@ background-repeat: repeat;
 
 #aboutStartP
 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top:60px;
 }
 
@@ -371,11 +373,17 @@ background-repeat: repeat;
 
 }
 
-#aboutTextWrap div:first-of-type
+#aboutTextWrap div:first-child
 {
-  margin-top:20px;
+  display: flex;
+  flex-direction: row;
 }
 
+#aboutTextWrap div p:first-of-type
+{
+  float: left;
+  padding-bottom: 20px;
+}
 
 #aboutTextWrap div p
 {
@@ -383,6 +391,8 @@ background-repeat: repeat;
   padding-right:20px;
   line-height: 30px;
   font-weight: normal;
+  margin-top: 20px;
+  flex-flow: wrap;
 }
 
 #aboutTextWrap h2
@@ -392,6 +402,29 @@ background-repeat: repeat;
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+#portrait
+{
+  width: 100%;
+  height: auto;
+  border:solid 2px;
+  border-bottom-color:#ffe;
+  border-left-color:#eed;
+  border-right-color:#eed;
+  border-top-color:#ccb;
+  max-height:100%;
+  max-width:100%;
+}
+
+#portraitFrame
+{
+  float: none;
+  margin: 0 auto;
+
+}
+
+
+
 
 /* Our Story Ends */
 
@@ -474,7 +507,7 @@ background-repeat: repeat;
 {
   width: 100%;
   padding:5px;
-  font-size: 18px;
+  font-size: 15px;
   border: 1px solid lightgrey;
   margin-top: 5px;
 }
@@ -488,7 +521,7 @@ textarea
 button[type="submit"]
 {
   width: 100%;
-  max-width: 400px;
+  max-width: 200px;
   border: none;
   outline: none;
   padding:15px;
@@ -600,32 +633,94 @@ text-align: center;
 }
 
 /* Store */
+:root {
+  --vh: 1vh;
+  --vw: 1vw;
+}
 
-.popUpDetails
+#popUpDetails
 {
   background-color: #ffffff;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 90vw;
   max-width: 1000px;
-  height: 90vh;
+  height: calc(var(--vh, 1vh) * 90);
   max-height: 700px;
-
+  position: relative;
+  -webkit-animation: ease-out 0.3s explode2;
+   -moz-animation: ease-out 0.3s explode2;
+   -o-animation: ease-out 0.3s explode2;
+   animation: ease-out 0.3s explode2;
 }
-.popUpDetails img
+#detailsImg
 {
-  width: 50%;
-  height: 100%;
-
+  width: 100%;
+  height: 55%;
+  content: "";
+  position: inline-flex;
+  background: url("../images/extra.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/extra.jpg', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/extra.jpg', sizingMethod='scale')";
+-webkit-animation: ease-out 0.6s appear;
+ -moz-animation: ease-out 0.6s appear;
+ -o-animation: ease-out 0.6s appear;
+ animation: ease-out 0.6s appear;
 }
 
-.screenWipe
+#popUpDetails div:last-of-type
+{
+  margin: 0 auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  -webkit-animation: ease-out 0.6s appear;
+   -moz-animation: ease-out 0.6s appear;
+   -o-animation: ease-out 0.6s appear;
+   animation: ease-out 0.6s appear;
+}
+
+#popUpDetails div h4
+{
+ margin-top: 10px;
+ color: #80241F;
+}
+
+#popUpDetails div h5
+{
+  margin-top: 10%;
+}
+
+#popUpDetails div p:last-child
+{
+  font-weight: normal;
+}
+
+#screenWipe
 {
   background-color: rgba(128,128,128, 0.6);
   position: fixed;
   height: 100%;
-  width: 100vw;
+  width: calc(100% - 15px);
   z-index: 5;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#xPopUp
+{
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  display:block;
+  right:5px;
+  top:5px;
 }
 
 .storeImg::before
@@ -648,6 +743,7 @@ text-align: center;
 #catWrap ul
 {
   display: flex;
+  margin: 0 auto;
   margin-top: 30px;
   flex-flow: wrap;
   justify-content: center;
@@ -661,6 +757,7 @@ text-align: center;
   padding-left: 15px;
   padding-right: 15px;
   margin:5px;
+  cursor: pointer;
 }
 
 #catWrap ul li p
@@ -691,6 +788,7 @@ text-align: center;
 {
   display: inline-flex;
   flex-direction: row;
+  height: 225px;
 }
 
 .menuItem
@@ -700,16 +798,26 @@ text-align: center;
   padding: none;
   box-shadow: 0px 0px 15px grey;
   margin: 15px;
+  position: relative;
+  -webkit-animation: ease-out 0.6s explode;
+   -moz-animation: ease-out 0.6s explode;
+   -o-animation: ease-out 0.6s explode;
+   animation: ease-out 0.6s explode;
 }
 
-.menuItem img
+.thb
 {
   width: 200px;
   height: 150px;
+  -webkit-animation: ease-out 0.6s appear;
+   -moz-animation: ease-out 0.6s appear;
+   -o-animation: ease-out 0.6s appear;
+   animation: ease-out 0.6s appear;
 }
 
 .menuItem div h4
 {
+  font-size: 1.2rem;
   text-align: center;
   color: #222222;
 }
@@ -720,9 +828,13 @@ text-align: center;
   flex-direction: column;
   align-items: center;
   height: 75px;
+  -webkit-animation: ease-out 0.6s appear;
+   -moz-animation: ease-out 0.6s appear;
+   -o-animation: ease-out 0.6s appear;
+   animation: ease-out 0.6s appear;
 }
 
-.menuItem div a
+.viewDets
 {
   position: relative;
   bottom:-8px;
@@ -733,9 +845,28 @@ text-align: center;
   font-weight: normal;
 }
 
+.viewDets:hover
+{
+  text-decoration: underline;
+}
+
 .menuItem div a:hover
 {
   color:#5e1a25;
+}
+
+.star
+{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right:5px;
+  top:5px;
+  cursor: context-menu;
+  -webkit-animation: ease-out 0.6s appear;
+   -moz-animation: ease-out 0.6s appear;
+   -o-animation: ease-out 0.6s appear;
+   animation: ease-out 0.6s appear;
 }
 
 #favouritesWrap
@@ -751,23 +882,9 @@ text-align: center;
 /* Media Queries */
 
 @media screen and (min-width: 560px) {
-  #aboutStartHeader h2
+  #aboutStartP 
   {
-    font-size: 4rem;
-    line-height: 1.5rem;
-    text-align: center;
-  }
-
-  #aboutStartHeader h2::first-line
-  {
-    line-height: 7rem;
-    font-size: 8rem;
-  }
-
-  #aboutStartHeader h2 span
-  {
-    font-size: 7rem;
-    line-height: 9rem;
+      margin-top:5px;
   }
   .workHeader h2
   {
@@ -777,10 +894,6 @@ text-align: center;
   .workHeader h2::first-line
   {
     font-size: 6rem;
-  }
-  #catWrap ul
-  {
-
   }
 
   #catWrap ul li
@@ -795,6 +908,20 @@ text-align: center;
 
 /*Medium Screen Query*/
 @media screen and (min-width: 767px) {
+  #aboutStartHeader h2:first-of-type
+  {
+    font-size: 120px;
+  }
+
+  #aboutStartHeader h2:last-of-type
+  {
+    font-size: 120px;
+  }
+
+  #specialH2
+  {
+    font-size: 160px;
+  }
   .fb-page
   {
     left:50%;
@@ -819,14 +946,46 @@ text-align: center;
   {
     font-size: 8rem;
   }
+  #popUpDetails
+  {
+    flex-direction: row;
+  }
+  #detailsImg
+  {
+    width: 200%;
+    height: 100%;
+  }
+  #popUpDetails div h4
+  {
+   margin-top: 30%;
+  }
+  #portraitFrame
+  {
+    float: right;
+      transform: translateY(-25px);
+  }
+  #middleP
+  {
+    width: 47%;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  #aboutStartHeader h2
+  #aboutStartHeader h2:first-of-type
   {
-    line-height: 1.5rem;
-    text-align: center;
+    font-size: 120px;
   }
+
+  #aboutStartHeader h2:last-of-type
+  {
+    font-size: 60px;
+  }
+
+  #specialH2
+  {
+    font-size: 100px;
+  }
+
   .stepsWrapper
   {
     flex-direction: row;
@@ -849,7 +1008,7 @@ text-align: center;
 
 .frame {
   background-color:#ddc;
-  border:solid 5vmin #fff;
+  border:solid 30px #fff;
   border-bottom-color:#ECC77B;
   border-left-color:#d6b269;
   border-radius:2px;
@@ -865,21 +1024,21 @@ text-align: center;
 }
   .frame:before {
     border-radius:2px;
-    bottom:-2vmin;
+    bottom: -10px;
     box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
     content:"";
-    left:-2vmin;
+    left:-10px;
     position:absolute;
-    right:-2vmin;
-    top:-2vmin;
+    right:-10px;
+    top:-10px;
   }
   .frame:after {
     border-radius:2px;
-    bottom:-2.5vmin;
+    bottom:-15px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
     content:"";
-    left:-2.5vmin;
+    left:-15px;
     position:absolute;
-    right:-2.5vmin;
-    top:-2.5vmin;
+    right:-15px;
+    top:-15px;
   }
